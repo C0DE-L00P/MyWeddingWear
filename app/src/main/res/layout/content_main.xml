@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:id="@+id/card_view"
+        android:layout_height="wrap_content"
+        android:elevation="14dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:background="@drawable/w1" />
+
+            <ImageView
+                android:id="@+id/imageForward"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                tools:background="@drawable/w1" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager_slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/price_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_margin="20dp"
+                android:background="@drawable/shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="#000"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    tools:text="Spanish" />
+
+                <TextView
+                    android:id="@+id/price_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#000"
+                    android:textSize="22sp"
+                    tools:text="1000$" />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/heart_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imageView"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_heart"
+                android:visibility="gone"
+                android:tag="off" />
+
+
+            <com.michaldrabik.tapbarmenulib.TapBarMenu
+                android:id="@+id/tapBarMenu"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                app:tbm_menuAnchor="top"
+                app:tbm_buttonPosition="left"
+                app:tbm_backgroundColor="#252525"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/viewpagertab"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/item1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/ic_share"
+                    />
+
+                <Space
+                    android:layout_width="56dp"
+                    android:layout_height="match_parent"
+                    />
+
+            </com.michaldrabik.tapbarmenulib.TapBarMenu>
+
+            <ImageView
+                android:id="@+id/gallery_ic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignBottom="@+id/imageView"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/cards"
+                android:tag="off" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

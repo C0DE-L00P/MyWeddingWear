@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+<!--    <HorizontalScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/tabLayout"-->
+<!--        android:fillViewport="true">-->
+<!--    </HorizontalScrollView>-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/viewpagertab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:translationY="-48dp"
+        app:stl_clickable="true"
+        app:stl_defaultTabBackground="?attr/selectableItemBackground"
+        app:stl_defaultTabTextAllCaps="true"
+        app:stl_defaultTabTextColor="#FC000000"
+        app:stl_defaultTabTextHorizontalPadding="40dp"
+        app:stl_defaultTabTextMinWidth="0dp"
+        app:stl_defaultTabTextSize="12sp"
+        android:background="#fff"
+        app:stl_distributeEvenly="false"
+        app:stl_dividerThickness="0dp"
+        app:stl_drawDecorationAfterTab="false"
+        app:stl_indicatorAlwaysInCenter="true"
+        app:stl_indicatorColor="#40C4FF"
+        app:stl_indicatorCornerRadius="2dp"
+        app:stl_indicatorGravity="bottom"
+        app:stl_indicatorInFront="false"
+        app:stl_indicatorInterpolation="linear"
+        app:stl_indicatorThickness="4dp"
+        app:stl_indicatorWidth="auto"
+        app:stl_indicatorWithoutPadding="false"
+        app:stl_overlineThickness="0dp"
+        app:stl_titleOffset="24dp"
+        app:stl_underlineThickness="0dp" />
+
+
+</RelativeLayout>
