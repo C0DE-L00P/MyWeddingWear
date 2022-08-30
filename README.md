@@ -6,4 +6,6 @@ https://user-images.githubusercontent.com/43136060/187470942-7bae4a1a-52b8-4f15-
 
 
 
-Technologies used: Java - XML - Native Android
+## Technologies used
+
+Java - XML - Native Android
